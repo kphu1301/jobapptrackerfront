@@ -52,7 +52,7 @@ class Login extends React.Component {
   logout = event => {
     event.preventDefault();
     sessionStorage.removeItem("jwt");
-    this.setState({ isAuthenticated: false });
+    this.setState({ username: "", password: "", isAuthenticated: false });
   };
 
   parseJwtForId = token => {
