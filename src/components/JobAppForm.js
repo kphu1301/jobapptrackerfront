@@ -32,6 +32,17 @@ class JobAppForm extends React.Component {
     };
 
     this.props.addOrEditJobApp(newJobApp);
+
+    this.setState({
+      id: this.props.jobApp.id,
+      company: this.props.jobApp.company,
+      position: this.props.jobApp.position,
+      jobPostingLink: this.props.jobApp.jobPostingLink,
+      recruiterName: this.props.jobApp.recruiterName,
+      recruiterEmail: this.props.jobApp.recruiterEmail,
+      status: this.props.jobApp.status
+    });
+
     this.refs.addDialog.hide();
   };
 
