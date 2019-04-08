@@ -2,7 +2,7 @@ import React from "react";
 import Login from "./Login";
 import Register from "./Register";
 import Home from "./Home";
-import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 class App extends React.Component {
   render() {

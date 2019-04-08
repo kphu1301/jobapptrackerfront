@@ -50,10 +50,13 @@ class Register extends React.Component {
 
       this.setState({ toLogin: true });
     } catch (error) {
-      toast.error("Unable to Register. Please try again", {
-        position: toast.POSITION.TOP_CENTER,
-        autoClose: 1500
-      });
+      toast.error(
+        "Failed to Register. Make sure all fields are entered correctly",
+        {
+          position: toast.POSITION.TOP_CENTER,
+          autoClose: 5000
+        }
+      );
       console.error(error);
     }
   };
