@@ -71,7 +71,7 @@ class Login extends React.Component {
                 <button onClick={this.logout}>Logout</button>
               </div>
             </div>
-            <JobAppList userId={this.state.userId} />)
+            <JobAppList userId={this.state.userId} />
           </div>
         );
       } else {
