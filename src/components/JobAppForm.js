@@ -52,7 +52,6 @@ class JobAppForm extends React.Component {
   };
 
   render() {
-    console.log("rendered form");
     return (
       <div>
         <Skylight hideOnOverlayClicked ref="addDialog">

@@ -199,7 +199,7 @@ class JobAppList extends React.Component {
       recruiterEmail: "",
       status: ""
     };
-    console.log("rendered joblist");
+
     return (
       <div className="ui segments">
         <div className="ui segment">
