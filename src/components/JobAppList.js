@@ -78,7 +78,6 @@ class JobAppList extends React.Component {
   };
 
   editJobApp = async jobApp => {
-    console.log("\n\n\n" + jobApp);
     try {
       const token = sessionStorage.getItem("jwt");
       const path = `/api/users/${this.props.userId}/jobapps/${jobApp.id}`;
@@ -152,12 +151,12 @@ class JobAppList extends React.Component {
           </td>
           <td className="center aligned">
             <JobAppForm
-              addOrEditJobApp={this.editJobApp}
+              addOrEdit={this.editJobApp}
               classText="ui blue small button"
               buttonText="Edit"
               headerText="Edit Job Application"
-              getJobApps={this.getJobApps}
               jobApp={jobApp}
+              action="edit"
             />
             <button
               className="ui mini red button"
@@ -200,17 +199,19 @@ class JobAppList extends React.Component {
       recruiterEmail: "",
       status: ""
     };
+    console.log("rendered joblist");
     return (
       <div className="ui segments">
         <div className="ui segment">
           <h1 className="ui header center aligned">Job Application List</h1>
         </div>
         <JobAppForm
-          addOrEditJobApp={this.addJobApp}
+          addOrEdit={this.addJobApp}
           buttonText="New Job Application"
           headerText="Create New Job Application"
           classText="ui green small button"
           jobApp={emptyJobApp}
+          action="add"
         />
 
         <div className="ui divider" />
