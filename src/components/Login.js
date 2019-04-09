@@ -42,7 +42,7 @@ class Login extends React.Component {
       this.setState({ userId: userId });
     } catch (error) {
       toast.error("Invalid Username/Password", {
-        autoClose: 2000,
+        autoClose: 5000,
         position: toast.POSITION.TOP_CENTER
       });
       console.error(error);
@@ -52,7 +52,7 @@ class Login extends React.Component {
   logout = event => {
     event.preventDefault();
     sessionStorage.removeItem("jwt");
-    this.setState({ username: "", password: "", isAuthenticated: false });
+    this.setState({ isAuthenticated: false });
   };
 
   parseJwtForId = token => {
