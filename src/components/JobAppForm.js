@@ -31,7 +31,18 @@ class JobAppForm extends React.Component {
       status: this.state.status
     };
 
-    this.props.addOrEditJobApp(newJobApp);
+    this.props.addOrEdit(newJobApp);
+    if (this.props.action === "add") {
+      this.setState({
+        id: "",
+        company: "",
+        position: "",
+        jobPostingLink: "",
+        recruiterName: "",
+        recruiterEmail: "",
+        status: ""
+      });
+    }
     this.refs.addDialog.hide();
   };
 
@@ -41,6 +52,7 @@ class JobAppForm extends React.Component {
   };
 
   render() {
+    console.log("rendered form");
     return (
       <div>
         <Skylight hideOnOverlayClicked ref="addDialog">
