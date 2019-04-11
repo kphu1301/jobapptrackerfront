@@ -68,7 +68,9 @@ class Login extends React.Component {
           <div>
             <div className="ui horizontal list">
               <div className="item right aligned">
-                <button onClick={this.logout}>Logout</button>
+                <button className="ui button orange" onClick={this.logout}>
+                  Logout
+                </button>
               </div>
             </div>
             <JobAppList userId={this.state.userId} />
